@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 import Utils
+SCORES_FILE_NAME = r"/app/Scores.txt"
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def score_server():
     try:
-        with open(Utils.SCORES_FILE_NAME,'r') as f:
+        with open(SCORES_FILE_NAME,'r') as f:
             return f"""<html>
 <head>
 <title>Scores Game</title>

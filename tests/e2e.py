@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 def test_scores_service():
     s = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=s, options=Options())
-    driver.get("http://127.0.0.1:5000")
+    driver.get("http://127.0.0.1:8777")
     x=driver.find_element(By.XPATH,"/html/body/h1/div").text
     print(x)
     return 1<int(x)<100
@@ -18,3 +18,4 @@ def main_function():
         return 0
     return -1
 
+print(main_function())

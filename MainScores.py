@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-import Utils
+
 SCORES_FILE_NAME = r"/app/Scores.txt"
 
 app = Flask(__name__)
